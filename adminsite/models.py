@@ -17,7 +17,7 @@ class Instructor(models.Model):
         on_delete=models.CASCADE,
     )
     full_time = models.BooleanField(default=True)
-    total_learners = models.IntegerField()
+    total_learners = models.IntegerField(null=True)
 
     def __str__(self):
         return self.user.username
